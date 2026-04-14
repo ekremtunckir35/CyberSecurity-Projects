@@ -4,212 +4,137 @@
 
 ![OakAcademy](https://img.shields.io/badge/OakAcademy-13.Batch_Siber_Güvenlik_Mühendisliği-6C47FF?style=for-the-badge&logo=bookstack&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Active-00C853?style=for-the-badge)
+![Projects](https://img.shields.io/badge/Projeler-2%2F16+-00C853?style=for-the-badge)
 
 > **OakAcademy 13. Batch Siber Güvenlik Mühendisliği Kariyer Kursu kapsamında**
 > **gerçekleştirilen proje çalışmaları ve raporları.**
 
 [![TryHackMe](https://img.shields.io/badge/TryHackMe-BY--EKREM-212C42?style=flat-square&logo=tryhackme&logoColor=white)](https://tryhackme.com/p/BY-EKREM)
+[![OakAcademy](https://img.shields.io/badge/OakAcademy-Cyber_Security_Engineer-6C47FF?style=flat-square&logo=bookstack&logoColor=white)](https://oakacademy.de/en/)
 [![GitHub](https://img.shields.io/badge/GitHub-ekremtunckir35-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ekremtunckir35)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ekremtunçkır)
 
 </div>
 
 ---
 
-## 📁 Projeler
+## 📁 Proje Listesi
 
-| # | Proje | Teknoloji | Tarih | Durum |
-|---|-------|-----------|-------|-------|
-| 01 | [EDR — Sophos Endpoint Detection & Response](#-proje-01--sophos-edr-yönetimi) | Sophos Central, EDR, DLP, Zero Trust | Nisan 2026 | ✅ Tamamlandı |
+| # | Proje | Teknoloji | Süre | Sonuç |
+|---|-------|-----------|------|-------|
+| 01 | [🔐 EDR — Sophos Endpoint Detection & Response](./01-EDR-Sophos/) | Sophos Central, XDR, DLP, Zero Trust | Nisan 2026 (9 gün) | ✅ Tamamlandı |
+| 02 | [🔥 Firewall — FortiGate Güvenlik Politikası](./02-FortiGate-Firewall/) | FortiGate, IPS, Web Filter, App Control | Nisan 2026 (~2 hafta) | ✅ Tamamlandı |
+| 03 | 🔜 Yakında | - | - | ⏳ |
 
 ---
 
-## 🔐 Proje 01 — Sophos EDR Yönetimi
+## 🔐 Proje 01 — Sophos EDR
 
 <div align="center">
 
 ![Sophos](https://img.shields.io/badge/Sophos-EDR-0073CF?style=for-the-badge&logo=sophos&logoColor=white)
 ![Zero Trust](https://img.shields.io/badge/Zero_Trust-Security-E84545?style=for-the-badge)
-![Windows](https://img.shields.io/badge/Windows-Endpoint-0078D4?style=for-the-badge&logo=windows&logoColor=white)
+![Tasks](https://img.shields.io/badge/Tasks-8%2F8_Tamamlandı-00C853?style=for-the-badge)
 
 </div>
 
-### 📋 Proje Bilgileri
+**Kurs:** OakAcademy 13. Batch | **Süre:** 9 gün | **Platform:** Sophos Central
 
-| Parametre | Değer |
+| Performans | Sonuç |
 |-----------|-------|
-| Proje Adı | Sophos EDR Sisteminin Zero Trust Güvenlik Politikaları ile Kurulumu ve Yönetimi |
-| Süre | 2 Nisan 2026 – 10 Nisan 2026 (9 Gün) |
-| Platform | Sophos Central (cloud.sophos.com) |
-| Test Cihazı | [REDACTED-DEVICE] — IP: [REDACTED-IP] |
-| Toplam Endpoint | 21 Windows Endpoint |
-| Rapor Tarihi | 11 Nisan 2026 |
+| TryHackMe Rooms | ✅ %100 |
+| CTF Tamamlama | ✅ %100 |
+| Quiz Ortalaması | 94 / 100 |
+| Modül Sınavı | 93 / 100 |
 
----
-
-### 🎯 Proje Hedefleri
+**Uygulanan Güvenlik Katmanları:**
 
 ```
-✅ Sophos EDR ajanının 21 Windows endpoint'e dağıtımı
-✅ Zero Trust tabanlı Threat Protection politikası
-✅ Web Control politikası (Kumar, Sosyal Ağlar, P2P engelleme)
-✅ Application Control politikası (TeamViewer, uTorrent engelleme)
-✅ DLP politikası (TC Kimlik No, Kredi Kartı sızıntı engeli)
-✅ EICAR test dosyası ile malware engelleme doğrulaması
-✅ Admin Isolation ile endpoint izolasyonu
-✅ Live Query ile proaktif tehdit avcılığı
+✅ Threat Protection  — Deep Learning ML, CryptoGuard, Exploit Prevention
+✅ Web Control        — Kumar, P2P, Sosyal Ağlar engelleme
+✅ Application Control — TeamViewer, uTorrent engelleme
+✅ DLP                — TC Kimlik No, Kredi Kartı sızıntı engeli
+✅ EICAR Test         — Malware tespit & temizleme doğrulaması
+✅ Admin Isolation    — Endpoint ağdan izole etme
+✅ Live Query         — Proaktif tehdit avcılığı (ağ bağlantıları + Registry)
+```
+
+📂 [Proje Detayları ve Raporlar →](./01-EDR-Sophos/)
+
+---
+
+## 🔥 Proje 02 — FortiGate Firewall
+
+<div align="center">
+
+![FortiGate](https://img.shields.io/badge/FortiGate-Firewall-EE3124?style=for-the-badge&logo=fortinet&logoColor=white)
+![Least Privilege](https://img.shields.io/badge/Least_Privilege-Zero_Trust-E84545?style=for-the-badge)
+![Tasks](https://img.shields.io/badge/Tasks-16%2F16_Tamamlandı-00C853?style=for-the-badge)
+
+</div>
+
+**Kurs:** OakAcademy 13. Batch | **Süre:** ~2 Hafta | **Platform:** FortiGate VM — FortiOS
+
+**Ağ Segmentasyonu:**
+
+```
+Finance Subnet  ──┐
+Sales Subnet    ──┤──▶  FortiGate FW  ──▶  WAN / İnternet
+IT Subnet       ──┤         │
+DMZ (WinSrv)   ──┘    Least Privilege
+```
+
+**Tamamlanan 16 Task:**
+
+```
+✅ Task 01 — Linux SSH & ICMP erişimi (subnet içi)
+✅ Task 02 — Windows RDP erişimi (subnet içi)
+✅ Task 03 — Log kayıtlarıyla doğrulama
+✅ Task 04 — Web sunucusu kurulumu + LAN erişimi (80, 8080, 9090)
+✅ Task 05 — Virtual-IP / Port Forwarding
+✅ Task 06 — LAN1 & LAN2 internet erişimi (NAT)
+✅ Task 07 — LAN1 kısıtlı internet (URL Filter)
+✅ Task 08 — LAN2 AWS engelleme (FQDN Filter)
+✅ Task 09 — Uygulama kontrolü (Instagram, Gmail, Facebook engel)
+✅ Task 10 — Web Filtering (kategori bazlı)
+✅ Task 11 — Antivirus (EICAR testi)
+✅ Task 12 — IPS (Intrusion Prevention System)
+✅ Task 13 — DNS Filtering
+✅ Task 14 — DMZ Windows Server politikası
+✅ Task 15 — Linux web sunucusu log izleme
+✅ Task 16 — Genel güvenlik politikası ve özet
+```
+
+📂 [Proje Detayları ve Raporlar →](./02-FortiGate-Firewall/)
+
+---
+
+## 📊 Genel İlerleme
+
+```
+Tamamlanan Projeler : 2
+Toplam Task         : 8 (EDR) + 16 (Firewall) = 24 task
+Başarı Oranı        : %100
+Devam Eden Kurs     : OakAcademy 13. Batch — Security Module ⏳
 ```
 
 ---
 
-### 📊 Aşama 1 — Dağıtım ve Temel Politikalar
+## 🛠️ Kullanılan Teknolojiler
 
-#### 1.1 Ajan Dağıtımı
-
-| Bilgi | Değer |
-|-------|-------|
-| Platform | Sophos Central (cloud.sophos.com) |
-| Agent Sürümü | Core Agent 2025.2.3.8.0 / Sophos Intercept X 2024.1.2.1.0 |
-| Agent Modu | XDR (Extended Detection & Response) |
-| Toplam Cihaz | 21 Windows Endpoint (Online) |
-| Tamper Protection | Aktif |
-| Heartbeat Durumu | Yeşil (Aktif) |
-
-#### 1.2 Threat Protection Politikası
-
-**Politika:** `Custom Threat Protection [REDACTED-GROUP]` — Güncelleme: 2 Nisan 2026
-
-| Özellik | Durum | Açıklama |
-|---------|-------|----------|
-| Live Protection | ✅ AKTİF | SophosLabs ile anlık tehdit doğrulama |
-| Deep Learning (ML) | ✅ AKTİF | Yapay zeka tabanlı malware tespiti |
-| Real-time Scanning | ✅ AKTİF | Yerel dosyalar ve ağ paylaşımları |
-| CryptoGuard | ✅ AKTİF | Ransomware dosya şifreleme engeli |
-| MBR Ransomware | ✅ AKTİF | Boot record saldırıları engeli |
-| Exploit Prevention | ✅ AKTİF | Browser, Java, Office, Media koruması |
-| Process Hollowing | ✅ AKTİF | Bellek tabanlı saldırı engeli |
-| Credential Theft | ✅ AKTİF | Kimlik bilgisi hırsızlığı engeli |
-| AMSI Protection | ✅ AKTİF | PowerShell/script tabanlı tehdit engeli |
-| C2 Beacon Engelleme | ✅ AKTİF | Command & Control sunucu bağlantısı engeli |
-| Adaptive Attack Protection | ✅ AKTİF | Saldırı anında otomatik sıkıştırma |
-| Threat Graph | ✅ AKTİF | Saldırı zinciri görselleştirme |
-
-#### 1.3 Web Control Politikası
-
-**Politika:** `WC-[REDACTED]-WebControl`
-
-| Test Sitesi | Kategori | Sophos Tepkisi | Sonuç |
-|-------------|----------|----------------|-------|
-| betsson.com | Gambling | Website Blocked | ✅ ENGELLENDİ |
-| facebook.com | Blogs & Forums | Website Blocked | ✅ ENGELLENDİ |
-| instagram.com | Blogs & Forums | Website Blocked | ✅ ENGELLENDİ |
-| utorrent.com | Peer-to-Peer | Website Blocked | ✅ ENGELLENDİ |
-
-**Haftalık Web Kontrol Raporu (Son 7 Gün):**
-
-| Engellenen Kategori | Ziyaret Sayısı | Benzersiz Kullanıcı |
-|--------------------|----------------|---------------------|
-| Streaming Media | 1127 | 14 |
-| Shopping | 67 | 1 |
-| Chat | 42 | 2 |
-| Blogs & Forums | 9 | 2 |
-| Peer-to-Peer | 5 | 1 |
-| Gambling | 2 | 1 |
-| Proxies & Translators | 1 | 1 |
-
----
-
-### 📊 Aşama 2 — Zero Trust İleri Seviye Politikalar
-
-#### 2.1 Application Control
-
-**Politika:** `AC-[REDACTED]-ApplicationControl`
-
-| Uygulama | Kategori | Eylem | Neden |
-|----------|----------|-------|-------|
-| TeamViewer | Remote Management Tool | 🚫 BLOCK | Yetkisiz uzaktan erişim riski |
-| uTorrent | File Sharing Application | 🚫 BLOCK | P2P malware yayılma vektörü |
-
-#### 2.2 DLP Politikası
-
-**Politika:** `DLP-[REDACTED]-Hassas Veri Engelleme`
-
-| Parametre | Değer |
-|-----------|-------|
-| Kural Adı | Data Upload Block |
-| Eylem | Block Transfer |
-| Hedef Kanallar | Email Client, Internet Browser, External Processes, Storage |
-| Korunan Veriler | TC Kimlik No, Kredi Kartı, Banka Hesap Bilgileri |
-| DLP Log Kaydı | `dlp-test.txt` — [REDACTED-USER] — 7 Nisan 2026 02:31 — **BLOCKED** |
-
----
-
-### 📊 Aşama 3 — Tehdit Simülasyonu ve Müdahale
-
-#### 3.1 EICAR Test — Malware Tespit ve Temizleme
-
-| Tarih/Saat | Olay | Dosya | Eylem |
-|------------|------|-------|-------|
-| 10 Nisan 2026, 15:24 | Malware detected: EICAR-AV-Test | New Text Document.txt | 🔍 TESPİT |
-| 10 Nisan 2026, 15:26 | Malware cleaned up: EICAR-AV-Test | New Text Document.txt | 🧹 TEMİZLENDİ |
-| 10 Nisan 2026, 15:26 | Malware detected: EICAR-AV-Test | text.txt | 🔍 TESPİT |
-| 10 Nisan 2026, 15:27 | Malware cleaned up: EICAR-AV-Test | text.txt | 🧹 TEMİZLENDİ |
-
-#### 3.2 Endpoint İzolasyonu — Admin Isolation
-
-| Parametre | Değer |
-|-----------|-------|
-| İzolasyon Zamanı | 10 Nisan 2026, 15:34 PM |
-| İzolasyon Türü | Admin Isolation (Manuel) |
-| Uygulayan | Ekrem Tunçkır |
-| İzolasyon Nedeni | EICAR-AV-Test zararlı yazılımı tespit edildi |
-| Sophos Central Erişimi | ✅ AKTİF (haberleşme devam etti) |
-| Dış Ağ Erişimi | ❌ KESİLDİ |
-| İzolasyon Kaldırma | 10 Nisan 2026, 15:39 PM |
-
-#### 3.3 Live Query A — Açık Ağ Bağlantıları
-
-**Sorgu:** `Processes with an open network connection` | Süre: 328ms
-
-| Path | Uzak IP | Port | Değerlendirme |
-|------|---------|------|---------------|
-| System32\... | [REDACTED-IP] | 3389 | ✅ RDP — Normal |
-| Program Files\... | [REDACTED-IP] | 443 | ✅ Amazon AWS / Sophos Agent |
-| Program Files\... | [REDACTED-IP] | 443 | ✅ Amazon AWS / Sophos Agent |
-| System32\... | [REDACTED-IP] | 443 | ✅ Microsoft Servisi — Normal |
-| Program Files\... | [REDACTED-IP] | 443 | ✅ Google DNS — Normal |
-| 0:0 (Kernel) | [REDACTED-IP] | 443 | ✅ Google DNS — Normal |
-
-> **Analiz:** Tehdit göstergesi bulunmadı. RDP, Google DNS ve AWS/Sophos agent bağlantıları normal.
-
-#### 3.4 Live Query B — Registry Startup Uygulamaları
-
-**Sorgu:** `Applications in the startup section of the registry` | Süre: 249ms
-
-| Path | Değerlendirme |
-|------|---------------|
-| cmd.exe (`/q /c del`) | ⚠️ ŞÜPHELİ — EICAR temizleme kalıntısı |
-| cmd.exe (`/q /c rmdir`) | ⚠️ ŞÜPHELİ — EICAR temizleme kalıntısı |
-| Google Drive | ✅ Normal |
-| OneDrive | ✅ Normal |
-| Windows Defender | ✅ Normal |
-| Sophos Agent | ✅ Normal |
-
-> **Analiz:** cmd.exe kayıtları EICAR temizleme sürecinden kaynaklanmaktadır. Aktif tehdit göstergesi tespit edilmemiştir.
-
----
-
-### 📄 Dosyalar
-
-| Dosya | Açıklama |
-|-------|----------|
-| `EDR_Projesi.docx` | Orijinal proje görev tanımı |
-| `EDR_Rapor_EkremTunckir.docx` | Tamamlanan proje raporu |
+![Sophos](https://img.shields.io/badge/Sophos-EDR-0073CF?style=flat-square&logo=sophos&logoColor=white)
+![FortiGate](https://img.shields.io/badge/FortiGate-Firewall-EE3124?style=flat-square&logo=fortinet&logoColor=white)
+![TryHackMe](https://img.shields.io/badge/TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 
 ---
 
 ## ⚠️ Yasal Uyarı
 
-Bu repo'daki tüm testler **kontrollü eğitim ortamında** ve **izinli sistemlerde** gerçekleştirilmiştir. Gerçek sistemlerde izinsiz uygulama **yasaktır**.
+Tüm projeler **kontrollü eğitim ortamında** ve **izinli sistemlerde** gerçekleştirilmiştir.
+Hassas bilgiler (IP adresleri, cihaz adları, ağ topolojisi) `[REDACTED]` ile gizlenmiştir.
 
 ---
 

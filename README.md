@@ -40,7 +40,7 @@
 | Proje Adı | Sophos EDR Sisteminin Zero Trust Güvenlik Politikaları ile Kurulumu ve Yönetimi |
 | Süre | 2 Nisan 2026 – 10 Nisan 2026 (9 Gün) |
 | Platform | Sophos Central (cloud.sophos.com) |
-| Test Cihazı | Std12 — IP: 10.10.200.22 |
+| Test Cihazı | [REDACTED-DEVICE] — IP: [REDACTED-IP] |
 | Toplam Endpoint | 21 Windows Endpoint |
 | Rapor Tarihi | 11 Nisan 2026 |
 
@@ -76,7 +76,7 @@
 
 #### 1.2 Threat Protection Politikası
 
-**Politika:** `Custom Threat Protection grup2` — Güncelleme: 2 Nisan 2026
+**Politika:** `Custom Threat Protection [REDACTED-GROUP]` — Güncelleme: 2 Nisan 2026
 
 | Özellik | Durum | Açıklama |
 |---------|-------|----------|
@@ -95,7 +95,7 @@
 
 #### 1.3 Web Control Politikası
 
-**Politika:** `WC-STD12-WebControl`
+**Politika:** `WC-[REDACTED]-WebControl`
 
 | Test Sitesi | Kategori | Sophos Tepkisi | Sonuç |
 |-------------|----------|----------------|-------|
@@ -122,7 +122,7 @@
 
 #### 2.1 Application Control
 
-**Politika:** `AC-STD12-ApplicationControl`
+**Politika:** `AC-[REDACTED]-ApplicationControl`
 
 | Uygulama | Kategori | Eylem | Neden |
 |----------|----------|-------|-------|
@@ -131,7 +131,7 @@
 
 #### 2.2 DLP Politikası
 
-**Politika:** `DLP-STD12-Hassas Veri Engelleme`
+**Politika:** `DLP-[REDACTED]-Hassas Veri Engelleme`
 
 | Parametre | Değer |
 |-----------|-------|
@@ -139,7 +139,7 @@
 | Eylem | Block Transfer |
 | Hedef Kanallar | Email Client, Internet Browser, External Processes, Storage |
 | Korunan Veriler | TC Kimlik No, Kredi Kartı, Banka Hesap Bilgileri |
-| DLP Log Kaydı | `dlp-test.txt` — STD12\\std — 7 Nisan 2026 02:31 — **BLOCKED** |
+| DLP Log Kaydı | `dlp-test.txt` — [REDACTED-USER] — 7 Nisan 2026 02:31 — **BLOCKED** |
 
 ---
 
@@ -172,12 +172,12 @@
 
 | Path | Uzak IP | Port | Değerlendirme |
 |------|---------|------|---------------|
-| System32\... | 10.81.128.3 | 3389 | ✅ RDP — Normal |
-| Program Files\... | 3.69.153.227 | 443 | ✅ Amazon AWS / Sophos Agent |
-| Program Files\... | 3.66.205.161 | 443 | ✅ Amazon AWS / Sophos Agent |
-| System32\... | 172.211.123.249 | 443 | ✅ Microsoft Servisi — Normal |
-| Program Files\... | 8.8.8.8 | 443 | ✅ Google DNS — Normal |
-| 0:0 (Kernel) | 8.8.4.4 | 443 | ✅ Google DNS — Normal |
+| System32\... | [REDACTED-IP] | 3389 | ✅ RDP — Normal |
+| Program Files\... | [REDACTED-IP] | 443 | ✅ Amazon AWS / Sophos Agent |
+| Program Files\... | [REDACTED-IP] | 443 | ✅ Amazon AWS / Sophos Agent |
+| System32\... | [REDACTED-IP] | 443 | ✅ Microsoft Servisi — Normal |
+| Program Files\... | [REDACTED-IP] | 443 | ✅ Google DNS — Normal |
+| 0:0 (Kernel) | [REDACTED-IP] | 443 | ✅ Google DNS — Normal |
 
 > **Analiz:** Tehdit göstergesi bulunmadı. RDP, Google DNS ve AWS/Sophos agent bağlantıları normal.
 

@@ -4,7 +4,7 @@
 
 ![OakAcademy](https://img.shields.io/badge/OakAcademy-13.Batch_Siber_Güvenlik_Mühendisliği-6C47FF?style=for-the-badge&logo=bookstack&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Active-00C853?style=for-the-badge)
-![Projects](https://img.shields.io/badge/Projeler-2%2F16+-00C853?style=for-the-badge)
+![Projects](https://img.shields.io/badge/Projeler-3%2F16+-00C853?style=for-the-badge)
 
 > **OakAcademy 13. Batch Siber Güvenlik Mühendisliği Kariyer Kursu kapsamında**
 > **gerçekleştirilen proje çalışmaları ve raporları.**
@@ -24,7 +24,8 @@
 |---|-------|-----------|------|-------|
 | 01 | [🔐 EDR — Sophos Endpoint Detection & Response](./01-EDR-Sophos/) | Sophos Central, XDR, DLP, Zero Trust | Nisan 2026 (9 gün) | ✅ Tamamlandı |
 | 02 | [🔥 Firewall — FortiGate Güvenlik Politikası](./02-FortiGate-Firewall/) | FortiGate, IPS, Web Filter, App Control | Nisan 2026 (~2 hafta) | ✅ Tamamlandı |
-| 03 | 🔜 Yakında | - | - | ⏳ |
+| 03 | [🔍 Vulnerability Management — Nmap & Nessus](./03-Vulnerability-Management/) | Nmap NSE, Tenable Nessus, CVSS, VPR, EPSS | Nisan 2026 (5 gün) | ✅ Tamamlandı |
+| 04 | 🔜 Yakında | - | - | ⏳ |
 
 ---
 
@@ -112,11 +113,56 @@ DMZ (WinSrv)   ──┘    Least Privilege
 ## 📊 Genel İlerleme
 
 ```
-Tamamlanan Projeler : 2
-Toplam Task         : 8 (EDR) + 16 (Firewall) = 24 task
+Tamamlanan Projeler : 3
+Toplam Task/Aşama   : 8 (EDR) + 16 (Firewall) + 9 (VM) = 33 görev
 Başarı Oranı        : %100
 Devam Eden Kurs     : OakAcademy 13. Batch — Security Module ⏳
 ```
+
+---
+
+## 🔍 Proje 03 — Vulnerability Management
+
+<div align="center">
+
+![Nessus](https://img.shields.io/badge/Tenable_Nessus-Professional-00C176?style=for-the-badge&logo=tenable&logoColor=white)
+![Nmap](https://img.shields.io/badge/Nmap-NSE_Scripts-0E83CD?style=for-the-badge)
+![Tasks](https://img.shields.io/badge/Aşama-9%2F9_Tamamlandı-00C853?style=for-the-badge)
+
+</div>
+
+**Kurs:** OakAcademy 13. Batch | **Süre:** 5 gün | **Hedefler:** Windows 10, Linux Ubuntu, Metasploitable
+
+**Tamamlanan 9 Aşama:**
+
+```
+✅ Aşama 1 — Topoloji ve hedef tanımlama (Nmap)
+✅ Aşama 2-4 — Manuel port/servis/OS tarama + NSE vulnerability scriptleri
+               → 31 TCP + 7 UDP açık port | 9 CVE | 3 zayıf kimlik doğrulama
+✅ Aşama 5 — Nessus Kimliksiz Tarama → 45 bulgu (7 Critical, 7 High)
+✅ Aşama 6 — Nessus Kimlikli Tarama  → 167 bulgu (30 Critical, 97 High)
+✅ Aşama 7 — Karşılaştırma: Kimlikli tarama %271 daha fazla bulgu tespit etti
+✅ Aşama 8 — Windows Authentication Failed simulasyonu + 9 neden analizi + çözüm
+✅ Aşama 9 — Kapsamlı rapor hazırlama
+```
+
+**Risk Skorlama Sistemleri:**
+
+| Sistem | Sorusu |
+|--------|--------|
+| CVSS v3.0 | "Bu zafiyet ne kadar şiddetli?" |
+| VPR (Tenable) | "Önümüzdeki 28 günde önce neyi düzeltmeliyim?" |
+| EPSS | "Bu zafiyet 30 günde istismar edilecek mi?" |
+
+**Kimliksiz vs Kimlikli Tarama Karşılaştırması:**
+
+| Metrik | Kimliksiz | Kimlikli | Artış |
+|--------|-----------|----------|-------|
+| Toplam Bulgu | 45 | 167 | **+271%** |
+| Critical | 7 | 30 | **+329%** |
+| High | 7 | 97 | **+1.286%** |
+
+📂 [Proje Detayları ve Rapor →](./03-Vulnerability-Management/)
 
 ---
 
@@ -124,6 +170,8 @@ Devam Eden Kurs     : OakAcademy 13. Batch — Security Module ⏳
 
 ![Sophos](https://img.shields.io/badge/Sophos-EDR-0073CF?style=flat-square&logo=sophos&logoColor=white)
 ![FortiGate](https://img.shields.io/badge/FortiGate-Firewall-EE3124?style=flat-square&logo=fortinet&logoColor=white)
+![Nessus](https://img.shields.io/badge/Tenable_Nessus-Professional-00C176?style=flat-square)
+![Nmap](https://img.shields.io/badge/Nmap-NSE-0E83CD?style=flat-square)
 ![TryHackMe](https://img.shields.io/badge/TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)

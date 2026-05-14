@@ -1,10 +1,10 @@
-# 🛡️ CyberSecurity Projects
+h# 🛡️ CyberSecurity Projects
 
 <div align="center">
 
 ![OakAcademy](https://img.shields.io/badge/OakAcademy-13.Batch_Siber_Güvenlik_Mühendisliği-6C47FF?style=for-the-badge&logo=bookstack&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Active-00C853?style=for-the-badge)
-![Projects](https://img.shields.io/badge/Projeler-3%2F16+-00C853?style=for-the-badge)
+![Projects](https://img.shields.io/badge/Projeler-4%2F16+-00C853?style=for-the-badge)
 
 > **OakAcademy 13. Batch Siber Güvenlik Mühendisliği Kariyer Kursu kapsamında**
 > **gerçekleştirilen proje çalışmaları ve raporları.**
@@ -25,6 +25,9 @@
 | 01 | [🔐 EDR — Sophos Endpoint Detection & Response](./01-EDR-Sophos/) | Sophos Central, XDR, DLP, Zero Trust | Nisan 2026 (9 gün) | ✅ Tamamlandı |
 | 02 | [🔥 Firewall — FortiGate Güvenlik Politikası](./02-FortiGate-Firewall/) | FortiGate, IPS, Web Filter, App Control | Nisan 2026 (~2 hafta) | ✅ Tamamlandı |
 | 03 | [🔍 Vulnerability Management — Nmap & Nessus](./03-Vulnerability-Management/) | Nmap NSE, Tenable Nessus, CVSS, VPR, EPSS | Nisan 2026 (5 gün) | ✅ Tamamlandı |
+
+| 04 | [🔴 Exploitation & Pentest — Shellshock, Privesc, Hash Cracking](./04-Exploitation-Pentest-Project/) | Nmap, Metasploit, Nessus, John the Ripper | Mayıs 2026 (~9 gün) | ✅ Tamamlandı |
+
 | 04 | 🔜 Yakında | - | - | ⏳ |
 
 ---

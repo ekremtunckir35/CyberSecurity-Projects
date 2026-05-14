@@ -1,4 +1,4 @@
-h# 🛡️ CyberSecurity Projects
+# 🛡️ CyberSecurity Projects
 
 <div align="center">
 
@@ -25,10 +25,7 @@ h# 🛡️ CyberSecurity Projects
 | 01 | [🔐 EDR — Sophos Endpoint Detection & Response](./01-EDR-Sophos/) | Sophos Central, XDR, DLP, Zero Trust | Nisan 2026 (9 gün) | ✅ Tamamlandı |
 | 02 | [🔥 Firewall — FortiGate Güvenlik Politikası](./02-FortiGate-Firewall/) | FortiGate, IPS, Web Filter, App Control | Nisan 2026 (~2 hafta) | ✅ Tamamlandı |
 | 03 | [🔍 Vulnerability Management — Nmap & Nessus](./03-Vulnerability-Management/) | Nmap NSE, Tenable Nessus, CVSS, VPR, EPSS | Nisan 2026 (5 gün) | ✅ Tamamlandı |
-
 | 04 | [🔴 Exploitation & Pentest — Shellshock, Privesc, Hash Cracking](./04-Exploitation-Pentest-Project/) | Nmap, Metasploit, Nessus, John the Ripper | Mayıs 2026 (~9 gün) | ✅ Tamamlandı |
-
-| 04 | 🔜 Yakında | - | - | ⏳ |
 
 ---
 
@@ -113,17 +110,6 @@ DMZ (WinSrv)   ──┘    Least Privilege
 
 ---
 
-## 📊 Genel İlerleme
-
-```
-Tamamlanan Projeler : 3
-Toplam Task/Aşama   : 8 (EDR) + 16 (Firewall) + 9 (VM) = 33 görev
-Başarı Oranı        : %100
-Devam Eden Kurs     : OakAcademy 13. Batch — Security Module ⏳
-```
-
----
-
 ## 🔍 Proje 03 — Vulnerability Management
 
 <div align="center">
@@ -169,12 +155,66 @@ Devam Eden Kurs     : OakAcademy 13. Batch — Security Module ⏳
 
 ---
 
+## 🔴 Proje 04 — Exploitation & Penetration Testing
+
+<div align="center">
+
+![Metasploit](https://img.shields.io/badge/Metasploit-Framework-2596BE?style=for-the-badge)
+![Nessus](https://img.shields.io/badge/Tenable_Nessus-Professional-00C176?style=for-the-badge&logo=tenable&logoColor=white)
+![Tasks](https://img.shields.io/badge/Aşama-6%2F6_Tamamlandı-00C853?style=for-the-badge)
+
+</div>
+
+**Kurs:** OakAcademy 13. Batch | **Süre:** ~9 gün | **Hedef:** Ubuntu 22.04 LTS (Kernel 5.15.0-67)
+
+**Saldırı Zinciri (Kill Chain):**
+
+```
+Nmap Recon → FTP Anonymous → Shellshock RCE → Meterpreter (www-data)
+→ SUID find → Root (euid=0) → Hash Crack → SSH Doğrulama → Nessus Credentialed Scan
+```
+
+**Tamamlanan 6 Aşama:**
+
+```
+✅ Aşama 1 — Keşif: Nmap (quick + full + vuln), FTP anonymous, web enumeration
+✅ Aşama 2 — İlk Erişim: Shellshock (CVE-2014-6271) → Meterpreter oturumu
+✅ Aşama 3 — Yetki Yükseltme: SUID /usr/bin/find → root erişimi
+✅ Aşama 4 — Post-Exploitation: Hash çıkarma → John the Ripper → parola kırma
+✅ Aşama 5 — Nessus: Uncredentialed (28) vs Credentialed (54) → %93 artış
+✅ Aşama 6 — Profesyonel pentest raporu hazırlama
+```
+
+| Metrik | Sonuç |
+|--------|-------|
+| Tespit Edilen Zafiyet | 8 (2 Critical, 3 High, 2 Medium, 1 Low) |
+| Exploit Edilen | Shellshock (CVE-2014-6271) |
+| Root Erişimi | ✅ SUID /usr/bin/find → euid=0 |
+| Hash Kırma | ✅ yescrypt → John the Ripper |
+| Nessus Karşılaştırma | Uncred: 28 zafiyet → Cred: 54 zafiyet (+93%) |
+
+📂 [Proje Detayları ve Rapor →](./04-Exploitation-Pentest-Project/)
+
+---
+
+## 📊 Genel İlerleme
+
+```
+Tamamlanan Projeler : 4
+Toplam Task/Aşama   : 8 (EDR) + 16 (Firewall) + 9 (VM) + 6 (Exploitation) = 39 görev
+Başarı Oranı        : %100
+Devam Eden Kurs     : OakAcademy 13. Batch — Security Module ⏳
+```
+
+---
+
 ## 🛠️ Kullanılan Teknolojiler
 
 ![Sophos](https://img.shields.io/badge/Sophos-EDR-0073CF?style=flat-square&logo=sophos&logoColor=white)
 ![FortiGate](https://img.shields.io/badge/FortiGate-Firewall-EE3124?style=flat-square&logo=fortinet&logoColor=white)
 ![Nessus](https://img.shields.io/badge/Tenable_Nessus-Professional-00C176?style=flat-square)
 ![Nmap](https://img.shields.io/badge/Nmap-NSE-0E83CD?style=flat-square)
+![Metasploit](https://img.shields.io/badge/Metasploit-Framework-2596BE?style=flat-square)
 ![TryHackMe](https://img.shields.io/badge/TryHackMe-212C42?style=flat-square&logo=tryhackme&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)

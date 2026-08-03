@@ -1,0 +1,4 @@
+PostToolUse:Edit hook returned blocking error
+[FAIL] YAML syntax error: could not find expected ':'
+Fault introduced: author Ekrem Tunckir
+Fault corrected: author: Ekrem Tunckir

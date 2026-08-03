@@ -1,0 +1,4 @@
+[PASS] YAML syntax valid
+[PASS] Sigma rule parsed by pySigma
+[PASS] Rule count: 1
+[PASS] Sigma validation completed: rules\suspicious_certutil_download.yml

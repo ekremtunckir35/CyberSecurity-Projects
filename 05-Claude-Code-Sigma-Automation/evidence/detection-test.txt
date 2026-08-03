@@ -1,0 +1,5 @@
+[PASS] JSON log file loaded
+[PASS] Sigma rule loaded
+[PASS] Positive test: 1 suspicious event detected
+[PASS] Negative test: 5 benign events ignored
+[PASS] All detection tests passed

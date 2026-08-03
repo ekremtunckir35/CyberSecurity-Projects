@@ -4,7 +4,7 @@
 
 ![OakAcademy](https://img.shields.io/badge/OakAcademy-13.Batch_Siber_Güvenlik_Mühendisliği-6C47FF?style=for-the-badge&logo=bookstack&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Active-00C853?style=for-the-badge)
-![Projects](https://img.shields.io/badge/Projeler-4%2F16+-00C853?style=for-the-badge)
+![Projects](https://img.shields.io/badge/Projeler-5%2F16+-00C853?style=for-the-badge)
 
 > **OakAcademy 13. Batch Siber Güvenlik Mühendisliği Kariyer Kursu kapsamında**
 > **gerçekleştirilen proje çalışmaları ve raporları.**
@@ -26,6 +26,7 @@
 | 02 | [🔥 Firewall — FortiGate Güvenlik Politikası](./02-FortiGate-Firewall/) | FortiGate, IPS, Web Filter, App Control | Nisan 2026 (~2 hafta) | ✅ Tamamlandı |
 | 03 | [🔍 Vulnerability Management — Nmap & Nessus](./03-Vulnerability-Management/) | Nmap NSE, Tenable Nessus, CVSS, VPR, EPSS | Nisan 2026 (5 gün) | ✅ Tamamlandı |
 | 04 | [🔴 Exploitation & Pentest — Shellshock, Privesc, Hash Cracking](./04-Exploitation-Pentest-Project/) | Nmap, Metasploit, Nessus, John the Ripper | Mayıs 2026 (~9 gün) | ✅ Tamamlandı |
+| 05 | [🧠 Detection Engineering Automation — Claude Code & Sigma](./05-Claude-Code-Sigma-Automation/) | Claude Code, Sigma, pySigma, Python, PostToolUse Hooks | Ağustos 2026 | ✅ Tamamlandı |
 
 ---
 
@@ -197,11 +198,34 @@ Nmap Recon → FTP Anonymous → Shellshock RCE → Meterpreter (www-data)
 
 ---
 
+## 🧠 Proje 05 — Detection Engineering Automation
+
+**Kurs:** OakAcademy 13. Batch | **Süre:** Ağustos 2026 | **Platform:** Claude Code CLI, Python
+
+Simüle edilmiş Sysmon Event ID 1 (process creation) logları kullanılarak detection engineering iş akışı otomatize edildi. Beş benign ve bir simulated suspicious event üretildi. `certutil.exe` ile URL üzerinden dosya indirme davranışı için bir Sigma kuralı yazıldı ve PyYAML ile pySigma `SigmaCollection.load_ruleset` kullanılarak parse doğrulaması yapıldı.
+
+`test_detection.py` ile gerçekleştirilen detection testinde pozitif testte şüpheli olay tespit edildi, negatif testte beş benign olay yanlış alarm üretmeden geçti. Bu script genel amaçlı bir Sigma engine değildir; yalnızca bu prototipteki detection mantığını test eder.
+
+Claude Code PostToolUse hook, `Write` veya `Edit` işleminden sonra `rules/` dizini altındaki `.yml` ve `.yaml` dosyalarını otomatik olarak PyYAML ve pySigma ile doğrular. Geçersiz YAML durumunda exit code 2 ile blocking error üretilir. Hook post-write validation uygular; dosya yazılmadan önce engellemez.
+
+| Kontrol | Sonuç |
+|---|---|
+| YAML syntax | ✅ Geçti |
+| pySigma parse | ✅ Geçti |
+| Pozitif detection testi | ✅ 1 olay |
+| Negatif detection testi | ✅ 5 benign olay |
+| PostToolUse başarı testi | ✅ Geçti |
+| PostToolUse blocking-error testi | ✅ Geçti |
+
+📂 [Proje Detayları, Kodlar ve Kanıtlar →](./05-Claude-Code-Sigma-Automation/)
+
+---
+
 ## 📊 Genel İlerleme
 
 ```
-Tamamlanan Projeler : 4
-Toplam Task/Aşama   : 8 (EDR) + 16 (Firewall) + 9 (VM) + 6 (Exploitation) = 39 görev
+Tamamlanan Projeler : 5
+Toplam Task/Aşama   : 8 (EDR) + 16 (Firewall) + 9 (VM) + 6 (Exploitation) + 6 (Detection Eng.) = 45 görev
 Başarı Oranı        : %100
 Devam Eden Kurs     : OakAcademy 13. Batch — Security Module ⏳
 ```
@@ -219,6 +243,8 @@ Devam Eden Kurs     : OakAcademy 13. Batch — Security Module ⏳
 ![Windows](https://img.shields.io/badge/Windows-0078D4?style=flat-square&logo=windows&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Sigma](https://img.shields.io/badge/Sigma-Detection_Rules-FF6B35?style=flat-square)
+![Claude Code](https://img.shields.io/badge/Claude_Code-CLI-6C47FF?style=flat-square)
 
 ---
 

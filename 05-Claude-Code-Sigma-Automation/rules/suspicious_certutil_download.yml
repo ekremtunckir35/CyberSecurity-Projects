@@ -1,0 +1,39 @@
+title: Suspicious Certutil URL Download
+id: 7d3f1a2e-9b4c-4e87-a6d5-2f8c0e1b3a94
+status: experimental
+description: >
+  Detects the use of certutil.exe to download files from a remote URL via the
+  -urlcache flag. Attackers commonly abuse this built-in Windows utility to
+  fetch malicious payloads while evading application-control policies.
+  This rule is intended for controlled detection engineering demonstrations.
+author: Ekrem Tunckir
+date: 2026-08-03
+references:
+  - https://attack.mitre.org/techniques/T1105/
+  - https://lolbas-project.github.io/lolbas/Binaries/Certutil/
+tags:
+  - attack.command-and-control
+  - attack.t1105
+  - attack.defense-evasion
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    Image|endswith: '\certutil.exe'
+    CommandLine|contains|all:
+      - '-urlcache'
+      - '-f'
+  selection_url:
+    CommandLine|contains:
+      - 'http://'
+      - 'https://'
+  condition: selection and selection_url
+falsepositives:
+  - Legitimate certificate management tasks performed by system administrators
+    using certutil with external Certificate Authority URLs
+  - Automated software distribution or patch management systems that invoke
+    certutil to fetch CRL or OCSP resources
+  - Security tooling or endpoint agents that use certutil during installation
+    or update workflows
+level: high

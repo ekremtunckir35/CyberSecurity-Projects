@@ -1,0 +1,8 @@
+# Cisco Linux (labvm): example monitor stanzas
+[monitor:///var/log/auth.log]
+disabled = false
+index = ciscovm
+
+[monitor:///var/log/syslog]
+disabled = false
+index = ciscovm

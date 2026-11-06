@@ -1,0 +1,4 @@
+index=ciscovm source="/var/log/auth.log"
+("Failed password" OR "authentication failure" OR "Invalid user")
+| table _time host source _raw
+| sort - _time

@@ -1,0 +1,4 @@
+index=_internal sourcetype=scheduler
+savedsearch_name="SOC - SSH Failed Login Detection"
+| table _time savedsearch_name status result_count fired alert_actions reason
+| sort - _time

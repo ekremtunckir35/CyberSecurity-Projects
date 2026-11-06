@@ -1,0 +1,6 @@
+# Cisco & Kali: example reconstructed from observed btool settings
+[tcpout]
+defaultGroup = default-autolb-group
+
+[tcpout:default-autolb-group]
+server = 10.44.0.105:9997

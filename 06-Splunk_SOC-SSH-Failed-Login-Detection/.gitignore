@@ -1,0 +1,15 @@
+# Local/editor artifacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+__pycache__/
+*.log
+*.bak
+*.tmp
+# Sensitive Splunk credentials, bundles and certificates should never be committed
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/

@@ -1,0 +1,8 @@
+# Kali Linux: example monitor stanzas
+[monitor:///var/log/auth.log]
+disabled = false
+index = kalivm
+
+[monitor:///var/log/syslog]
+disabled = false
+index = kalivm

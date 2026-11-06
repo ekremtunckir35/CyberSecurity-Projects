@@ -1,0 +1,4 @@
+index=ciscovm source="/var/log/auth.log" "Failed password" earliest=-5m@m latest=@m
+| rex field=_raw "Failed password for (?:invalid user )?(?<target_user>\S+) from (?<src_ip>\d{1,3}(?:\.\d{1,3}){3}) port (?<src_port>\d+)"
+| where src_ip="10.44.0.101"
+| stats count AS failed_attempts by host src_ip target_user

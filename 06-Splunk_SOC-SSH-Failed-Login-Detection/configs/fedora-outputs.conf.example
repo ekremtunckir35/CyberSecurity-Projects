@@ -1,0 +1,6 @@
+# Fedora outputs.conf : matched observed btool settings
+[tcpout]
+defaultGroup = fedora_group
+
+[tcpout:fedora_group]
+server = 10.44.0.105:9997

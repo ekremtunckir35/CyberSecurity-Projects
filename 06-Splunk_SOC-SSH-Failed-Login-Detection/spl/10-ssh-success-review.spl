@@ -1,0 +1,4 @@
+index=ciscovm source="/var/log/auth.log"
+("Accepted password" OR "Accepted publickey")
+| table _time host _raw
+| sort - _time

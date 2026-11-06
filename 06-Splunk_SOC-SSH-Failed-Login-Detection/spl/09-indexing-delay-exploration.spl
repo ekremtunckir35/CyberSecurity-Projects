@@ -1,0 +1,3 @@
+index=ciscovm source="/var/log/auth.log" "Failed password"
+| eval index_delay_seconds=_indextime - _time
+| stats count AS events min(index_delay_seconds) AS minimum_delay max(index_delay_seconds) AS maximum_delay avg(index_delay_seconds) AS mean_delay by host source

@@ -1,0 +1,3 @@
+(index=ciscovm OR index=kalivm OR index=fedoravm)
+| stats count by index host source
+| sort index source

@@ -4,10 +4,12 @@
 
 ![OakAcademy](https://img.shields.io/badge/OakAcademy-13.Batch_Siber_Güvenlik_Mühendisliği-6C47FF?style=for-the-badge&logo=bookstack&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Active-00C853?style=for-the-badge)
-![Projects](https://img.shields.io/badge/Projeler-5%2F16+-00C853?style=for-the-badge)
+![Projects](https://img.shields.io/badge/Projeler-6%2F16+-00C853?style=for-the-badge)
+![Focus](https://img.shields.io/badge/Focus-SOC%20%7C%20Detection%20Engineering%20%7C%20Security%20Labs-0E7490?style=for-the-badge)
 
-> **OakAcademy 13. Batch Siber Güvenlik Mühendisliği Kariyer Kursu kapsamında**
-> **gerçekleştirilen proje çalışmaları ve raporları.**
+> **Siber güvenlik mühendisliği portföyü:** SOC/SIEM, Detection Engineering, EDR, Firewall, Vulnerability Management ve Penetration Testing.
+>
+> OakAcademy eğitimi ve bağımsız, yetkili laboratuvar çalışmalarından oluşan uygulamalı proje raporları; komutlar, tespit kuralları ve doğrulama kanıtlarıyla birlikte sunulmuştur.
 
 [![TryHackMe](https://img.shields.io/badge/TryHackMe-BY--EKREM-212C42?style=flat-square&logo=tryhackme&logoColor=white)](https://tryhackme.com/p/BY-EKREM)
 [![OakAcademy](https://img.shields.io/badge/OakAcademy-Cyber_Security_Engineer-6C47FF?style=flat-square&logo=bookstack&logoColor=white)](https://oakacademy.de/en/)
@@ -18,6 +20,18 @@
 
 ---
 
+## 🎯 Portföy Özeti
+
+| Alan | Uygulamalı çalışma |
+|---|---|
+| **SOC / SIEM** | Splunk Enterprise, Universal Forwarder, Linux SSH log analizi ve Scheduled Alert |
+| **Detection Engineering** | SPL korelasyon ve eşik kontrolü; Sigma/pySigma otomasyonu |
+| **Blue Team** | Sophos EDR, FortiGate politikaları, log gözlemlenebilirliği |
+| **Vulnerability Management** | Nmap, Nessus ve risk önceliklendirme |
+| **Offensive Security** | İzinli laboratuvarda exploit doğrulama ve privilege escalation |
+
+> **Öne çıkan yeni çalışma:** [Proje 06 — Splunk SOC / SSH Failed Login Detection](./06-Splunk_SOC-SSH-Failed-Login-Detection/) · 3 Linux endpoint · 2.207 log olayı (anlık sorgu) · 5 dakikada 5 başarısız SSH girişi · **3 doğrulanmış alarm tetiklenmesi**.
+
 ## 📁 Proje Listesi
 
 | # | Proje | Teknoloji | Süre | Sonuç |
@@ -27,6 +41,7 @@
 | 03 | [🔍 Vulnerability Management — Nmap & Nessus](./03-Vulnerability-Management/) | Nmap NSE, Tenable Nessus, CVSS, VPR, EPSS | Nisan 2026 (5 gün) | ✅ Tamamlandı |
 | 04 | [🔴 Exploitation & Pentest — Shellshock, Privesc, Hash Cracking](./04-Exploitation-Pentest-Project/) | Nmap, Metasploit, Nessus, John the Ripper | Mayıs 2026 (~9 gün) | ✅ Tamamlandı |
 | 05 | [🧠 Detection Engineering Automation — Claude Code & Sigma](./05-Claude-Code-Sigma-Automation/) | Claude Code, Sigma, pySigma, Python, PostToolUse Hooks | Ağustos 2026 | ✅ Tamamlandı |
+| 06 | [📡 SOC / SIEM — Splunk SSH Failed Login Detection](./06-Splunk_SOC-SSH-Failed-Login-Detection/) | Splunk Enterprise, Universal Forwarder, SPL, Linux, MITRE ATT&CK | Kasım 2026 | ✅ Detection & Alert doğrulandı |
 
 ---
 
@@ -221,13 +236,43 @@ Claude Code PostToolUse hook, `Write` veya `Edit` işleminden sonra `rules/` diz
 
 ---
 
+## 📡 Proje 06 — Splunk SOC / SSH Failed Login Detection
+
+![Splunk](https://img.shields.io/badge/Splunk-Enterprise%2010.6.1.1-65A637?style=flat-square)
+![SOC](https://img.shields.io/badge/SOC-Detection%20Engineering-0E7490?style=flat-square)
+![MITRE](https://img.shields.io/badge/MITRE%20ATT%26CK-T1110.001-C0392B?style=flat-square)
+
+**Platform:** VMware Workstation · Parrot OS (Splunk Enterprise) · Cisco Linux (`labvm`) · Kali Linux · Fedora Workstation 45
+
+**Senaryo:** Üç Linux endpoint'inden `Universal Forwarder` aracılığıyla merkezî Splunk'a güvenlik logları gönderildi. SSH kimlik doğrulama olayları SPL ile ayrıştırılarak, **aynı host + kaynak IP + kullanıcı için son 5 dakikada en az 5 başarısız parola girişini** arayan Scheduled Alert oluşturuldu.
+
+| Doğrulama | Laboratuvar kanıtı |
+|---|---|
+| Merkezî log toplama | `ciscovm`, `kalivm`, `fedoravm` indeksleri |
+| Log görünürlüğü | Birleşik sorguda **2.207 event** (tek bir anlık `All time` sonucu) |
+| Tespit alanları | `host`, `src_ip`, `target_user`, `failed_attempts` |
+| Eşik testi | **5 başarısız SSH girişi / 5 dakika** |
+| Alarm | **3 Trigger History kaydı** (01:12, 01:13, 01:14) |
+| ATT&CK eşlemesi | [T1110.001 — Password Guessing](https://attack.mitre.org/techniques/T1110/001/) |
+| Ek analiz | False positive/false negative, zaman penceresi, alarm tekrarı ve troubleshooting |
+
+**Otomatik alarmın kanıtı:**
+
+![Splunk Scheduled Alert Trigger History](./06-Splunk_SOC-SSH-Failed-Login-Detection/evidence/21-automatic-alert-trigger-history.png)
+
+**Teknik çıkarım:** Üç tetiklenme, üç bağımsız saldırı anlamına gelmez; örtüşen Scheduled Alert pencereleri aynı olayları tekrar yakalayabilir. `Throttle` ve ek korelasyon kuralları bir sonraki iyileştirme olarak belirlenmiş, **henüz uygulanmış olarak raporlanmamıştır**.
+
+📂 **[Tam vaka analizi, 21 ekran görüntüsü, SPL sorguları ve yapılandırma örnekleri →](./06-Splunk_SOC-SSH-Failed-Login-Detection/)**
+
+---
+
 ## 📊 Genel İlerleme
 
 ```
-Tamamlanan Projeler : 5
-Toplam Task/Aşama   : 8 (EDR) + 16 (Firewall) + 9 (VM) + 6 (Exploitation) + 6 (Detection Eng.) = 45 görev
-Başarı Oranı        : %100
-Devam Eden Kurs     : OakAcademy 13. Batch — Security Module ⏳
+Belgelenen Projeler : 6
+İlk 5 Projedeki Görev: 8 (EDR) + 16 (Firewall) + 9 (Vuln. Mgmt.) + 6 (Pentest) + 6 (Detection Automation) = 45
+Proje 06            : Splunk SOC / SSH Detection vaka analizi — otomatik alarm doğrulandı
+Sonraki İyileştirme : Alert throttling, indeksleme gecikmesi ölçümü ve başarılı SSH korelasyonu
 ```
 
 ---
@@ -245,13 +290,16 @@ Devam Eden Kurs     : OakAcademy 13. Batch — Security Module ⏳
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Sigma](https://img.shields.io/badge/Sigma-Detection_Rules-FF6B35?style=flat-square)
 ![Claude Code](https://img.shields.io/badge/Claude_Code-CLI-6C47FF?style=flat-square)
+![Splunk](https://img.shields.io/badge/Splunk-SIEM-65A637?style=flat-square)
+![SPL](https://img.shields.io/badge/SPL-Search%20Processing%20Language-0E7490?style=flat-square)
+![VMware](https://img.shields.io/badge/VMware-Workstation-607078?style=flat-square)
+![MITRE ATT&CK](https://img.shields.io/badge/MITRE%20ATT%26CK-T1110.001-C0392B?style=flat-square)
 
 ---
 
 ## ⚠️ Yasal Uyarı
 
-Tüm projeler **kontrollü eğitim ortamında** ve **izinli sistemlerde** gerçekleştirilmiştir.
-Hassas bilgiler (IP adresleri, cihaz adları, ağ topolojisi) `[REDACTED]` ile gizlenmiştir.
+Tüm projeler **kontrollü eğitim ortamlarında ve yetkilendirilmiş sistemlerde** yürütülen çalışmaları belgelemektedir. Splunk vaka analizindeki `10.44.0.0/24` adresleri yalnızca **izole laboratuvarın özel ağ IP'leridir**; bu dokümanlarda tamamının `[REDACTED]` olduğu iddia edilmez. Parola, token, özel anahtar veya canlı üretim altyapısı bilgileri paylaşılmamalıdır.
 
 ---
 

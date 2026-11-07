@@ -40,7 +40,7 @@ Bu vaka çalışmasında izole VMware laboratuvarı üzerinde üç Linux makines
 
 **Sonuç:** SPL tespiti ve otomatik zamanlanmış alarm **başarılı olarak doğrulandı**. Üç tetiklenme **üç ayrı saldırı** demek değildir; arama pencereleri örtüşebilir.
 
-> **Kanıt disiplini:** Aşağıdaki “gözlendi/doğrulandı” ifadeleri sohbet boyunca paylaşılan terminal çıktıları veya ekran görüntülerine dayanır. Bazı `tar`, `btool` ve örnek `.conf` komutları ise laboratuvarı **yeniden oluşturma yönergesidir**; her satırın bire bir çalıştırıldığına ilişkin ayrı ekran görüntüsü yoktur. Uygulanmamış tuning/hardening işlemleri açıkça belirtilmiştir.
+> **Kanıt disiplini:** Aşağıdaki “gözlendi/doğrulandı” ifadeleri `evidence/` klasöründeki ekran görüntülerine ve terminal çıktılarına dayanır. Bazı `tar`, `btool` ve örnek `.conf` komutları ise laboratuvarı **yeniden oluşturma yönergesidir**; her satırın bire bir çalıştırıldığına ilişkin ayrı ekran görüntüsü yoktur. Uygulanmamış tuning/hardening işlemleri açıkça belirtilmiştir.
 
 ## 2. Mimari ve kapsam
 
@@ -560,7 +560,6 @@ Ayrıca dosyalar:
 
 - [`spl/`](spl/) — yeniden çalıştırılabilir SPL aramaları ve doğrulama sorguları.
 - [`configs/`](configs/) — taşınabilir `inputs.conf` ve `outputs.conf` örnekleri; **gerçek sistemde doğrulanmadan kopyalanmamalı**.
-- [`docs/`](docs/) — GitHub'a yükleme ve güvenlik kontrolleri.
 
 ### 12.3 Sonuç / profesyonel değerlendirme
 
@@ -575,4 +574,4 @@ Bu vaka çalışması yalnızca Splunk kurulumundan ibaret değildir. Asıl çı
 
 **Ethics & Safety:** Tüm SSH testleri yalnızca kullanıcıya ait izole VMware ortamında, kontrollü yanlış parola denemeleriyle gerçekleştirilmiştir. Gerçek ağlara veya yetkisiz sistemlere uygulanmamalıdır.
 
-**Reproduction reminder:** GitHub'a yüklemeden önce ekran görüntülerinde kullanıcı adı, IP, host adı, URL, lisans ve diğer özel bilgilerin yayımlanmasının uygunluğunu ayrıca kontrol edin. Parola, token veya özel anahtar paylaşmayın.
+**Şeffaflık notu:** Laboratuvarı kendim kurdum; testleri ve ekran görüntülerini kendim ürettim. Dokümantasyonu hazırlarken AI desteği aldım.
